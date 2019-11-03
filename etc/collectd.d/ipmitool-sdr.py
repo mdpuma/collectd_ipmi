@@ -12,7 +12,7 @@ out, err = p.communicate()
 
 hostname = os.getenv("COLLECTD_HOSTNAME", out.strip())
 interval = os.getenv("COLLECTD_INTERVAL", "10")
-
+interval = float(interval)
 
 def gettype(name):
     type = name.split(" ")[0]
